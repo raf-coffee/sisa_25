@@ -2,8 +2,8 @@ import { Image } from "@mantine/core";
 import Task from "../Task/Task";
 import Item from "../Item/Item";
 import SubTask from "../SubTask/SubTask";
-import img1 from "../../assets/task7-01.png";
-import img2 from "../../assets/task7-02.png";
+import img1 from "../../assets/task7-01.webp";
+import img2 from "../../assets/task7-02.webp";
 
 export default function Task7() {
   return (

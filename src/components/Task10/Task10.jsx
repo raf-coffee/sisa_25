@@ -2,13 +2,13 @@ import { Image } from "@mantine/core";
 import Task from "../Task/Task";
 import Item from "../Item/Item";
 import SubTask from "../SubTask/SubTask";
-import img1 from "../../assets/task10-01.png";
-import img2 from "../../assets/task10-02.png";
-import img3 from "../../assets/task10-03.png";
-import img4 from "../../assets/task10-04.png";
-import img5 from "../../assets/task10-05.png";
-import img6 from "../../assets/task10-06.png";
-import img7 from "../../assets/task10-07.png";
+import img1 from "../../assets/task10-01.webp";
+import img2 from "../../assets/task10-02.webp";
+import img3 from "../../assets/task10-03.webp";
+import img4 from "../../assets/task10-04.webp";
+import img5 from "../../assets/task10-05.webp";
+import img6 from "../../assets/task10-06.webp";
+import img7 from "../../assets/task10-07.webp";
 
 export default function Task10() {
   return (
