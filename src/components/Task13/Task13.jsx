@@ -31,6 +31,8 @@ export default function Task13() {
 
       {/* HQ-CLI */}
       <SubTask machine={"HQ-CLI"}>
+        <Item content="su -" />
+        <Item content="apt-get update" />
         <Item content="apt-get install -y chrony" />
         <Item content='sed -i "s/pool pool.ntp.org iburst/#pool pool.ntp.org iburst/g" /etc/chrony.conf' />
         <Item content='echo "server 192.168.100.1 iburst" >> /etc/chrony.conf' />
@@ -51,6 +53,7 @@ export default function Task13() {
 
       {/* BR-SRV */}
       <SubTask machine={"BR-SRV"}>
+        <Item content="apt-get update" />
         <Item content="apt-get install -y chrony" />
         <Item content='sed -i "s/pool pool.ntp.org iburst/#pool pool.ntp.org iburst/g" /etc/chrony.conf' />
         <Item content='echo "server 192.168.100.1 iburst" >> /etc/chrony.conf' />

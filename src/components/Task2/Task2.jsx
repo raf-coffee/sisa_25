@@ -2,7 +2,6 @@ import { Image } from "@mantine/core";
 import Task from "../Task/Task";
 import Item from "../Item/Item";
 import SubTask from "../SubTask/SubTask";
-import screen001 from "../../assets/screen001.webp";
 import img1 from "../../assets/task2-01.webp";
 import img3 from "../../assets/task2-03.webp";
 import img4 from "../../assets/task2-04.webp";
@@ -18,9 +17,7 @@ export default function Task2() {
       {/* ISP */}
       <SubTask machine={"ISP"}>
         <Item content="apt-get update -y" />
-        <Item content="ip -br a">
-          <Image radius="md" w={"90%"} fit="contain" src={screen001} />
-        </Item>
+        <Item content="ip -br a" />
         <Item content="mkdir /etc/net/ifaces/ens19 /etc/net/ifaces/ens20" />
         <Item content="cp /etc/net/ifaces/ens18/options /etc/net/ifaces/ens19/options" />
         <Item content="cp /etc/net/ifaces/ens18/options /etc/net/ifaces/ens20/options" />
@@ -32,7 +29,6 @@ export default function Task2() {
         <Item content="hostnamectl hostname ISP ; exec bash" />
         <Item content="systemctl restart network" />
         <Item content="apt-get install -y iptables" />
-        <Item content="iptables -t nat -A POSTROUTING -j MASQUERADE -o ens18" />
         <Item content="iptables-save >> /etc/sysconfig/iptables" />
         <Item content="iptables-save" />
         <Item content="ip -br a">
@@ -159,7 +155,6 @@ export default function Task2() {
         <Item content="cp /etc/net/ifaces/ens18/options /etc/net/ifaces/ens19/options" />
         <Item content='echo "192.168.0.1/28" > /etc/net/ifaces/ens19/ipv4address' />
         <Item content="systemctl restart network" />
-        <Item content="сделать скрин с именем машины и пингами в задание 1" />
       </SubTask>
 
       {/* BR-SRV */}

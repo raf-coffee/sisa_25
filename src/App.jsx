@@ -21,7 +21,7 @@ function App() {
   return (
     <Box bg={theme.colors.indigo[0]}>
       <title>Демо экзамен 2025</title>
-      <Container size={"sm"}>
+      <Container size={"sm"} pb={"lg"}>
         {/* Модуль 1 */}
         <Title order={1} style={{ textAlign: "center" }}>
           Модуль 1
