@@ -13,7 +13,8 @@ export default function Task9() {
       {/* HQ-RTR */}
       <SubTask machine={"HQ-RTR"}>
         <Item content="apt-get install -y dhcp-server" />
-        <Item content='sed -i "s/DHCPDARGS=/DHCPDARGS=vlan200/g" /etc/sysconfig/dhcpd' />
+        <Item content="vim /etc/sysconfig/dhcpd" />
+        <Item content="добавляем в DHCPDARGS =vlan200" />
         <Item content="cp /etc/dhcp/dhcpd.conf.example /etc/dhcp/dhcpd.conf" />
         <Item content="vim /etc/dhcp/dhcpd.conf" />
         <Item content="в option domain-name так же в ковычках: au-team.irpo" />
@@ -37,6 +38,7 @@ export default function Task9() {
         <Item content="esc + shift z z" />
         <Item content="systemctl restart dhcpd" />
         <Item content="systemctl enable --now dhcpd" />
+        <Item content="systemctl status dhcpd" />
         <Item content="Возвращаемся в Задание 2, в HQ-CLI и настриваем дальше" />
       </SubTask>
     </Task>

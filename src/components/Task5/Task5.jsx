@@ -14,7 +14,8 @@ export default function Task5() {
         <Item content='echo "Authorized access only!" >> /etc/ban' />
         <Item content="systemctl restart sshd" />
         <Item content="systemctl enable --now sshd" />
-        <Item content="ssh sshuser@192.168.0.2 -p 2024" />
+        <Item content="ssh sshuser@192.168.100.2 -p 2024" />
+        <Item content="P@$$word" />
         <Item content="Скриншот в Рисунок 13" />
         <Item content="exit" />
       </SubTask>
@@ -28,7 +29,8 @@ export default function Task5() {
         <Item content='echo "Authorized access only!" >> /etc/ban' />
         <Item content="systemctl restart sshd" />
         <Item content="systemctl enable --now sshd" />
-        <Item content="ssh sshuser@192.168.100.2 -p 2024" />
+        <Item content="ssh sshuser@192.168.0.2 -p 2024" />
+        <Item content="P@$$word" />
         <Item content="Скриншот в Рисунок 14" />
         <Item content="exit" />
       </SubTask>

@@ -10,6 +10,10 @@ import Task9 from "./components/Task9/Task9";
 import Task10 from "./components/Task10/Task10";
 import Task11 from "./components/Task11/Task11";
 import Task12 from "./components/Task12/Task12";
+import Task13 from "./components/Task13/Task13";
+import Task14 from "./components/Task14/Task14";
+import Task15 from "./components/Task15/Task15";
+import Task16 from "./components/Task16/Task16";
 
 function App() {
   const theme = useMantineTheme();
@@ -38,6 +42,10 @@ function App() {
           Модуль 2
         </Title>
         <Task12 />
+        <Task13 />
+        <Task14 />
+        <Task15 />
+        <Task16 />
       </Container>
     </Box>
   );

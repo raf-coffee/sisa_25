@@ -15,7 +15,7 @@ export default function Task3() {
         <Item content="P@$$word" />
         <Item content="id sshuser" />
         <Item content="su - sshuser" />
-        <Item content="apt-get update" />
+        <Item content="sudo apt-get update" />
         <Item content="Скриншот в Рисунок 8" />
         <Item content="Чтобы вернуться к root - ctrl d" />
       </SubTask>
@@ -30,7 +30,7 @@ export default function Task3() {
         <Item content="P@$$word" />
         <Item content="id sshuser" />
         <Item content="su - sshuser" />
-        <Item content="apt-get update" />
+        <Item content="sudo apt-get update" />
         <Item content="Скриншот в Рисунок 9" />
         <Item content="Чтобы вернуться к root - ctrl d" />
       </SubTask>
@@ -43,9 +43,9 @@ export default function Task3() {
         <Item content="visudo -c" />
         <Item content="passwd net_admin" />
         <Item content="P@ssw0rd" />
-        <Item content="su - net_admin" />
-        <Item content="apt-get update" />
         <Item content="id net_admin" />
+        <Item content="su - net_admin" />
+        <Item content="sudo apt-get update" />
         <Item content="Скриншот в Рисунок 10" />
         <Item content="Чтобы вернуться к root - ctrl d" />
       </SubTask>
@@ -58,9 +58,9 @@ export default function Task3() {
         <Item content="visudo -c" />
         <Item content="passwd net_admin" />
         <Item content="P@ssw0rd" />
-        <Item content="su - net_admin" />
-        <Item content="apt-get update" />
         <Item content="id net_admin" />
+        <Item content="su - net_admin" />
+        <Item content="sudo apt-get update" />
         <Item content="Скриншот в Рисунок 11" />
         <Item content="Чтобы вернуться к root - ctrl d" />
       </SubTask>

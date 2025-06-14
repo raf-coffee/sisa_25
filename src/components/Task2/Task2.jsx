@@ -28,8 +28,7 @@ export default function Task2() {
         <Item content='sed -i "s/dhcp/static/g" /etc/net/ifaces/ens20/options' />
         <Item content='echo "172.16.4.1/28" >> /etc/net/ifaces/ens19/ipv4address' />
         <Item content='echo "172.16.5.1/28" >> /etc/net/ifaces/ens20/ipv4address' />
-        <Item content="vim /etc/net/sysctl.conf" />
-        <Item content="меняем в net.ipv4.ip_forward = 0 на 1 затем esc + shift z z" />
+        <Item content='sed -i "s/net.ipv4.ip_forward = 0/net.ipv4.ip_forward = 1/g" /etc/net/sysctl.conf' />
         <Item content="hostnamectl hostname ISP ; exec bash" />
         <Item content="systemctl restart network" />
         <Item content="apt-get install -y iptables" />
@@ -54,8 +53,7 @@ export default function Task2() {
         <Item content='echo "172.16.4.2/28" >> /etc/net/ifaces/ens18/ipv4address' />
         <Item content='echo "default via 172.16.4.1" >> /etc/net/ifaces/ens18/ipv4route' />
         <Item content='echo "nameserver 8.8.8.8" >> /etc/net/ifaces/ens18/resolv.conf' />
-        <Item content="vim /etc/net/sysctl.conf" />
-        <Item content="меняем в net.ipv4.ip_forward = 0 на 1 затем esc + shift z z" />
+        <Item content='sed -i "s/net.ipv4.ip_forward = 0/net.ipv4.ip_forward = 1/g" /etc/net/sysctl.conf' />
         <Item content="systemctl restart network" />
         <Item content="ping 172.16.4.1" />
         <Item content="ping 8.8.8.8" />
@@ -90,6 +88,7 @@ export default function Task2() {
         <Item content="save" />
         <Item content="quit" />
         <Item content="reboot" />
+        <Item content="apt-get install iptables" />
         <Item content="iptables -t nat -A POSTROUTING -j MASQUERADE -o ens18" />
         <Item content="iptables-save >> /etc/sysconfig/iptables" />
         <Item content="iptables-save">
@@ -109,8 +108,7 @@ export default function Task2() {
         <Item content='echo "172.16.5.2/28" >> /etc/net/ifaces/ens18/ipv4address' />
         <Item content='echo "default via 172.16.5.1" >> /etc/net/ifaces/ens18/ipv4route' />
         <Item content='echo "nameserver 8.8.8.8" >> /etc/net/ifaces/ens18/resolv.conf' />
-        <Item content="vim /etc/net/sysctl.conf" />
-        <Item content="меняем в net.ipv4.ip_forward = 0 на 1 затем esc + shift z z" />
+        <Item content='sed -i "s/net.ipv4.ip_forward = 0/net.ipv4.ip_forward = 1/g" /etc/net/sysctl.conf' />
         <Item content="systemctl restart network" />
         <Item content="ping 172.16.5.1" />
         <Item content="ping 8.8.8.8" />
@@ -145,6 +143,7 @@ export default function Task2() {
         <Item content="quit" />
         <Item content="ping 10.5.5.1" />
         <Item content="Скриншот в Рисунок 18" />
+        <Item content="apt-get install iptables" />
         <Item content="iptables -t nat -A POSTROUTING -j MASQUERADE -o ens18" />
         <Item content="iptables-save >> /etc/sysconfig/iptables" />
         <Item content="iptables-save">
@@ -184,8 +183,7 @@ export default function Task2() {
         <Item content='echo "192.168.100.2/28" > /etc/net/ifaces/ens18/ipv4address' />
         <Item content='echo "default via 192.168.100.1" > /etc/net/ifaces/ens18/ipv4route' />
         <Item content='echo "nameserver 8.8.8.8" > /etc/net/ifaces/ens18/resolv.conf' />
-        <Item content="vim /etc/net/sysctl.conf" />
-        <Item content="меняем в net.ipv4.ip_forward = 0 на 1 затем esc + shift z z" />
+        <Item content='sed -i "s/net.ipv4.ip_forward = 0/net.ipv4.ip_forward = 1/g" /etc/net/sysctl.conf' />
         <Item content="systemctl restart network" />
         <Item content="ping 192.168.100.1" />
         <Item content="ping 8.8.8.8" />
