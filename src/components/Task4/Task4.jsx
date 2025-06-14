@@ -2,11 +2,11 @@ import { Image } from "@mantine/core";
 import Task from "../Task/Task";
 import Item from "../Item/Item";
 import SubTask from "../SubTask/SubTask";
-import img3 from "../../assets/task2-03.png";
+import img3 from "../../assets/task2-03.webp";
 
 export default function Task4() {
   return (
-    <Task title={"Задание 4"}>
+    <Task title={"Задание 4. Настройка openvswitch"}>
       {/* HQ-RTR */}
       <SubTask machine={"HQ-RTR"}>
         <Item content="apt-get install -y openvswitch" />
@@ -24,10 +24,11 @@ export default function Task4() {
         <Item content='echo "192.168.200.1/28" > /etc/net/ifaces/vlan200/ipv4address' />
         <Item content='echo "192.168.99.1/28" > /etc/net/ifaces/vlan999/ipv4address' />
         <Item content="systemctl restart network" />
+        <Item content="ovs-vsctl show" />
         <Item content="ip -br a">
           <Image radius="md" w={"90%"} fit="contain" src={img3} />
         </Item>
-        <Item content="Делаем скриншот в отчет, что всё сделано" />
+        <Item content="Скриншот в Рисунок 12" />
         <Item content="Возвращаемся в Задание 2, в BR-RTR и настриваем дальше" />
       </SubTask>
     </Task>

@@ -2,17 +2,17 @@ import { Image } from "@mantine/core";
 import Task from "../Task/Task";
 import Item from "../Item/Item";
 import SubTask from "../SubTask/SubTask";
-import img1 from "../../assets/task10-01.png";
-import img2 from "../../assets/task10-02.png";
-import img3 from "../../assets/task10-03.png";
-import img4 from "../../assets/task10-04.png";
-import img5 from "../../assets/task10-05.png";
-import img6 from "../../assets/task10-06.png";
-import img7 from "../../assets/task10-07.png";
+import img1 from "../../assets/task10-01.webp";
+import img2 from "../../assets/task10-02.webp";
+import img3 from "../../assets/task10-03.webp";
+import img4 from "../../assets/task10-04.webp";
+import img5 from "../../assets/task10-05.webp";
+import img6 from "../../assets/task10-06.webp";
+import img7 from "../../assets/task10-07.webp";
 
 export default function Task10() {
   return (
-    <Task title={"Задание 10"}>
+    <Task title={"Задание 10. Настройка DNS"}>
       {/* HQ-SRV */}
       <SubTask machine={"HQ-SRV"}>
         <Item content="apt-get update -y" />
@@ -21,6 +21,7 @@ export default function Task10() {
         <Item content="Приводим к виду:">
           <Image radius="md" w={"90%"} fit="contain" src={img1} />
         </Item>
+        <Item content="Скриншот в Рисунок 31" />
         <Item content="Затем там же и после правки esc + shit z z:">
           <Image radius="md" w={"90%"} fit="contain" src={img2} />
         </Item>
@@ -34,19 +35,18 @@ export default function Task10() {
         <Item content="Приводим к виду:">
           <Image radius="md" w={"90%"} fit="contain" src={img4} />
         </Item>
-        <Item content="сделать скриншот в отчет в Задание 10" />
+        <Item content="Скриншот в Рисунок 32" />
         <Item content="cp au-team.db 100.168.192.in-addr.arpa" />
         <Item content="cp au-team.db 200.168.192.in-addr.arpa" />
         <Item content="vim 100.168.192.in-addr.arpa" />
         <Item content="Приводим к виду:">
           <Image radius="md" w={"90%"} fit="contain" src={img5} />
         </Item>
-        <Item content="сделать скриншот в отчет в Задание 10" />
+        <Item content="Скриншот в Рисунок 33" />
         <Item content="vim 200.168.192.in-addr.arpa" />
         <Item content="Приводим к виду:">
           <Image radius="md" w={"90%"} fit="contain" src={img6} />
         </Item>
-        <Item content="сделать скриншот в отчет в Задание 10" />
         <Item content="cd /var/lib/bind/etc/" />
         <Item content="rndc-confgen > /var/lib/bind/etc/rndc.key" />
         <Item content="sed -i '6,$d' rndc.key" />
@@ -64,7 +64,7 @@ export default function Task10() {
         <Item content="reboot" />
         <Item content="ping ya.ru" />
         <Item content="ping br-srv" />
-        <Item content="сделать скриншот в отчет в Задание 10 с успешным пингом" />
+        <Item content="Скриншот в Рисунок 34" />
         <Item content="Если где-то что-то далее будет на работать, то смотреть iptables" />
       </SubTask>
 
@@ -75,6 +75,7 @@ export default function Task10() {
         <Item content="systemctl restart network" />
         <Item content="ping ya.ru" />
         <Item content="ping br-srv" />
+        <Item content="Скриншот в Рисунок 35" />
       </SubTask>
 
       {/* BR-RTR */}
@@ -84,6 +85,7 @@ export default function Task10() {
         <Item content="systemctl restart network" />
         <Item content="ping ya.ru" />
         <Item content="ping hq-srv" />
+        <Item content="Скриншот в Рисунок 36" />
       </SubTask>
 
       {/* BR-SRV */}
@@ -93,12 +95,14 @@ export default function Task10() {
         <Item content="systemctl restart network" />
         <Item content="ping ya.ru" />
         <Item content="ping hq-srv" />
+        <Item content="Скриншот в Рисунок 37" />
       </SubTask>
 
       {/* HQ-CLI */}
       <SubTask machine={"HQ-CLI"}>
         <Item content="ping ya.ru" />
         <Item content="ping br-srv" />
+        <Item content="Скриншот в Рисунок 38" />
       </SubTask>
     </Task>
   );

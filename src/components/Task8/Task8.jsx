@@ -4,7 +4,7 @@ import SubTask from "../SubTask/SubTask";
 
 export default function Task8() {
   return (
-    <Task title={"Задание 8"}>
+    <Task title={"Задание 8. Настройка iptables"}>
       <SubTask machine={"HQ-RTR"}>
         <Item content="В рамках задания 2 уже настроили iptables и скрины должны быть в отчете" />
       </SubTask>
