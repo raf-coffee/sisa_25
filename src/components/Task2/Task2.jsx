@@ -19,18 +19,15 @@ export default function Task2() {
         <Item content="apt-get update -y" />
         <Item content="ip -br a" />
         <Item content="mkdir /etc/net/ifaces/ens19 /etc/net/ifaces/ens20" />
-        <Item content="cp /etc/net/ifaces/ens18/options /etc/net/ifaces/ens19/options" />
-        <Item content="cp /etc/net/ifaces/ens18/options /etc/net/ifaces/ens20/options" />
+        <Item content="cp /etc/net/ifaces/ens18/options /etc/net/ifaces/ens19/options && cp /etc/net/ifaces/ens18/options /etc/net/ifaces/ens20/options" />
         <Item content='sed -i "s/dhcp/static/g" /etc/net/ifaces/ens19/options' />
         <Item content='sed -i "s/dhcp/static/g" /etc/net/ifaces/ens20/options' />
-        <Item content='echo "172.16.4.1/28" >> /etc/net/ifaces/ens19/ipv4address' />
-        <Item content='echo "172.16.5.1/28" >> /etc/net/ifaces/ens20/ipv4address' />
+        <Item content='echo "172.16.4.1/28" >> /etc/net/ifaces/ens19/ipv4address && echo "172.16.5.1/28" >> /etc/net/ifaces/ens20/ipv4address' />
         <Item content='sed -i "s/net.ipv4.ip_forward = 0/net.ipv4.ip_forward = 1/g" /etc/net/sysctl.conf' />
         <Item content="hostnamectl hostname ISP ; exec bash" />
         <Item content="systemctl restart network" />
         <Item content="apt-get install -y iptables" />
-        <Item content="iptables-save >> /etc/sysconfig/iptables" />
-        <Item content="iptables-save" />
+        <Item content="iptables-save >> /etc/sysconfig/iptables && iptables-save" />
         <Item content="ip -br a">
           <Image radius="md" w={"90%"} fit="contain" src={img1} />
         </Item>
@@ -46,9 +43,7 @@ export default function Task2() {
         </Item>
         <Item content="hostnamectl hostname HQ-RTR.au-team.irpo ; exec bash" />
         <Item content='sed -i "s/\bdhcp4\|dhcp\b/static/g" /etc/net/ifaces/ens18/options' />
-        <Item content='echo "172.16.4.2/28" >> /etc/net/ifaces/ens18/ipv4address' />
-        <Item content='echo "default via 172.16.4.1" >> /etc/net/ifaces/ens18/ipv4route' />
-        <Item content='echo "nameserver 8.8.8.8" >> /etc/net/ifaces/ens18/resolv.conf' />
+        <Item content='echo "172.16.4.2/28" >> /etc/net/ifaces/ens18/ipv4address && echo "default via 172.16.4.1" >> /etc/net/ifaces/ens18/ipv4route && echo "nameserver 8.8.8.8" >> /etc/net/ifaces/ens18/resolv.conf' />
         <Item content='sed -i "s/net.ipv4.ip_forward = 0/net.ipv4.ip_forward = 1/g" /etc/net/sysctl.conf' />
         <Item content="systemctl restart network" />
         <Item content="ping 172.16.4.1" />
@@ -85,9 +80,7 @@ export default function Task2() {
         <Item content="quit" />
         <Item content="reboot" />
         <Item content="apt-get install iptables" />
-        <Item content="iptables -t nat -A POSTROUTING -j MASQUERADE -o ens18" />
-        <Item content="iptables-save >> /etc/sysconfig/iptables" />
-        <Item content="iptables-save">
+        <Item content="iptables -t nat -A POSTROUTING -j MASQUERADE -o ens18 && iptables-save >> /etc/sysconfig/iptables && iptables-save">
           <Image radius="md" w={"90%"} fit="contain" src={img10} />
         </Item>
         <Item content="ping 8.8.8.8" />
@@ -101,9 +94,7 @@ export default function Task2() {
       <SubTask machine={"BR-RTR"}>
         <Item content="hostnamectl hostname BR-RTR.au-team.irpo ; exec bash" />
         <Item content='sed -i "s/\bdhcp4\|dhcp\b/static/g" /etc/net/ifaces/ens18/options' />
-        <Item content='echo "172.16.5.2/28" >> /etc/net/ifaces/ens18/ipv4address' />
-        <Item content='echo "default via 172.16.5.1" >> /etc/net/ifaces/ens18/ipv4route' />
-        <Item content='echo "nameserver 8.8.8.8" >> /etc/net/ifaces/ens18/resolv.conf' />
+        <Item content='echo "172.16.5.2/28" >> /etc/net/ifaces/ens18/ipv4address && echo "default via 172.16.5.1" >> /etc/net/ifaces/ens18/ipv4route && echo "nameserver 8.8.8.8" >> /etc/net/ifaces/ens18/resolv.conf' />
         <Item content='sed -i "s/net.ipv4.ip_forward = 0/net.ipv4.ip_forward = 1/g" /etc/net/sysctl.conf' />
         <Item content="systemctl restart network" />
         <Item content="ping 172.16.5.1" />
@@ -140,9 +131,7 @@ export default function Task2() {
         <Item content="ping 10.5.5.1" />
         <Item content="Скриншот в Рисунок 18" />
         <Item content="apt-get install iptables" />
-        <Item content="iptables -t nat -A POSTROUTING -j MASQUERADE -o ens18" />
-        <Item content="iptables-save >> /etc/sysconfig/iptables" />
-        <Item content="iptables-save">
+        <Item content="iptables -t nat -A POSTROUTING -j MASQUERADE -o ens18 && iptables-save >> /etc/sysconfig/iptables && iptables-save">
           <Image radius="md" w={"90%"} fit="contain" src={img10} />
         </Item>
         <Item content="ping 8.8.8.8" />
@@ -151,8 +140,7 @@ export default function Task2() {
         <Item content="systemctl restart NetworkManager" />
         <Item content="Делаем паузу для настройки openvswitch в Задании 4" />
         <Item content="После работы в Задании 4 идём дальше тут" />
-        <Item content="mkdir /etc/net/ifaces/ens19" />
-        <Item content="cp /etc/net/ifaces/ens18/options /etc/net/ifaces/ens19/options" />
+        <Item content="mkdir /etc/net/ifaces/ens19 && cp /etc/net/ifaces/ens18/options /etc/net/ifaces/ens19/options" />
         <Item content='echo "192.168.0.1/28" > /etc/net/ifaces/ens19/ipv4address' />
         <Item content="systemctl restart network" />
       </SubTask>
@@ -161,9 +149,7 @@ export default function Task2() {
       <SubTask machine={"BR-SRV"}>
         <Item content="hostnamectl hostname BR-SRV.au-team.irpo ; exec bash" />
         <Item content='sed -i "s/\bdhcp4\|dhcp\b/static/g" /etc/net/ifaces/ens18/options' />
-        <Item content='echo "192.168.0.2/28" > /etc/net/ifaces/ens18/ipv4address' />
-        <Item content='echo "default via 192.168.0.1" > /etc/net/ifaces/ens18/ipv4route' />
-        <Item content='echo "nameserver 8.8.8.8" > /etc/net/ifaces/ens18/resolv.conf' />
+        <Item content='echo "192.168.0.2/28" > /etc/net/ifaces/ens18/ipv4address && echo "default via 192.168.0.1" > /etc/net/ifaces/ens18/ipv4route && echo "nameserver 8.8.8.8" > /etc/net/ifaces/ens18/resolv.conf' />
         <Item content="systemctl restart network" />
         <Item content="ping 192.168.0.1" />
         <Item content="ping 8.8.8.8" />
@@ -175,9 +161,7 @@ export default function Task2() {
       <SubTask machine={"HQ-SRV"}>
         <Item content="hostnamectl hostname HQ-SRV.au-team.irpo ; exec bash" />
         <Item content='sed -i "s/\bdhcp4\|dhcp\b/static/g" /etc/net/ifaces/ens18/options' />
-        <Item content='echo "192.168.100.2/28" > /etc/net/ifaces/ens18/ipv4address' />
-        <Item content='echo "default via 192.168.100.1" > /etc/net/ifaces/ens18/ipv4route' />
-        <Item content='echo "nameserver 8.8.8.8" > /etc/net/ifaces/ens18/resolv.conf' />
+        <Item content='echo "192.168.100.2/28" > /etc/net/ifaces/ens18/ipv4address && echo "default via 192.168.100.1" > /etc/net/ifaces/ens18/ipv4route && echo "nameserver 8.8.8.8" > /etc/net/ifaces/ens18/resolv.conf' />
         <Item content='sed -i "s/net.ipv4.ip_forward = 0/net.ipv4.ip_forward = 1/g" /etc/net/sysctl.conf' />
         <Item content="systemctl restart network" />
         <Item content="ping 192.168.100.1" />

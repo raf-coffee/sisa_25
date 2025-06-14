@@ -14,7 +14,7 @@ export default function Task9() {
       <SubTask machine={"HQ-RTR"}>
         <Item content="apt-get install -y dhcp-server" />
         <Item content="vim /etc/sysconfig/dhcpd" />
-        <Item content="добавляем в DHCPDARGS =vlan200" />
+        <Item content="добавляем в DHCPDARGS vlan200" />
         <Item content="cp /etc/dhcp/dhcpd.conf.example /etc/dhcp/dhcpd.conf" />
         <Item content="vim /etc/dhcp/dhcpd.conf" />
         <Item content="в option domain-name так же в ковычках: au-team.irpo" />

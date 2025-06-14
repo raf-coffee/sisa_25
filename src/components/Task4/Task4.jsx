@@ -17,12 +17,8 @@ export default function Task4() {
         <Item content="ovs-vsctl add-port HQ-SW vlan200 tag=200 -- set interface vlan200 type=internal" />
         <Item content="ovs-vsctl add-port HQ-SW vlan999 tag=999 -- set interface vlan999 type=internal" />
         <Item content="mkdir /etc/net/ifaces/vlan100 /etc/net/ifaces/vlan200 /etc/net/ifaces/vlan999" />
-        <Item content="cp /etc/net/ifaces/ens18/options /etc/net/ifaces/vlan100/options" />
-        <Item content="cp /etc/net/ifaces/ens18/options /etc/net/ifaces/vlan200/options" />
-        <Item content="cp /etc/net/ifaces/ens18/options /etc/net/ifaces/vlan999/options" />
-        <Item content='echo "192.168.100.1/28" > /etc/net/ifaces/vlan100/ipv4address' />
-        <Item content='echo "192.168.200.1/28" > /etc/net/ifaces/vlan200/ipv4address' />
-        <Item content='echo "192.168.99.1/28" > /etc/net/ifaces/vlan999/ipv4address' />
+        <Item content="cp /etc/net/ifaces/ens18/options /etc/net/ifaces/vlan100/options && cp /etc/net/ifaces/ens18/options /etc/net/ifaces/vlan200/options && cp /etc/net/ifaces/ens18/options /etc/net/ifaces/vlan999/options" />
+        <Item content='echo "192.168.100.1/28" > /etc/net/ifaces/vlan100/ipv4address && echo "192.168.200.1/28" > /etc/net/ifaces/vlan200/ipv4address && echo "192.168.99.1/28" > /etc/net/ifaces/vlan999/ipv4address' />
         <Item content="systemctl restart network" />
         <Item content="ovs-vsctl show" />
         <Item content="ip -br a">
