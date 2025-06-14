@@ -7,7 +7,7 @@ import img2 from "../../assets/task7-02.png";
 
 export default function Task7() {
   return (
-    <Task title={"Задание 7"}>
+    <Task title={"Задание 7. Настройка FRR"}>
       {/* HQ-RTR */}
       <SubTask machine={"HQ-RTR"}>
         <Item content="apt-get install -y frr" />
@@ -36,7 +36,10 @@ export default function Task7() {
         <Item content="ip r">
           <Image radius="md" w={"90%"} fit="contain" src={img1} />
         </Item>
-        <Item content="Скриншот в отчет в задание 7" />
+        <Item content='vtysh -c "show running-config"' />
+        <Item content="Скриншот в Рисунок 19" />
+        <Item content="ip route" />
+        <Item content="Скриншот в Рисунок 20" />
       </SubTask>
 
       {/* BR-RTR */}
@@ -65,7 +68,10 @@ export default function Task7() {
           <Image radius="md" w={"90%"} fit="contain" src={img2} />
         </Item>
         <Item content="ping 192.168.100.2" />
-        <Item content="Скриншот в отчет в задание 7" />
+        <Item content='vtysh -c "show running-config"' />
+        <Item content="Скриншот в Рисунок 21" />
+        <Item content="ip route" />
+        <Item content="Скриншот в Рисунок 22" />
       </SubTask>
 
       {/* HQ-SRV */}

@@ -9,7 +9,7 @@ import img4 from "../../assets/task2-11.png";
 
 export default function Task9() {
   return (
-    <Task title={"Задание 9"}>
+    <Task title={"Задание 9. Настройка DHCP"}>
       {/* HQ-RTR */}
       <SubTask machine={"HQ-RTR"}>
         <Item content="apt-get install -y dhcp-server" />
@@ -33,8 +33,8 @@ export default function Task9() {
         <Item content="далее в host fantasia, смотрим какой MAC-адрес у HQ-CLI, и вместо 10 в конце ставим 2:">
           <Image radius="md" w={"50%"} fit="contain" src={img4} />
         </Item>
+        <Item content="Скриншот в Рисунок 29" />
         <Item content="esc + shift z z" />
-        <Item content="Делаем ещё один скриншот в отчет, что сделаны настройки" />
         <Item content="systemctl restart dhcpd" />
         <Item content="systemctl enable --now dhcpd" />
         <Item content="Возвращаемся в Задание 2, в HQ-CLI и настриваем дальше" />

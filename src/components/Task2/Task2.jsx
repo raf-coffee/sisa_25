@@ -10,12 +10,11 @@ import img5 from "../../assets/task2-05.png";
 import img6 from "../../assets/task2-06.png";
 import img7 from "../../assets/task2-07.png";
 import img8 from "../../assets/task2-08.png";
-import img9 from "../../assets/task2-09.png";
 import img10 from "../../assets/task2-10.png";
 
 export default function Task2() {
   return (
-    <Task title={"Задание 2"}>
+    <Task title={"Задание 1 и 2. Базовая настройка устройств"}>
       {/* ISP */}
       <SubTask machine={"ISP"}>
         <Item content="apt-get update -y" />
@@ -29,16 +28,18 @@ export default function Task2() {
         <Item content='sed -i "s/dhcp/static/g" /etc/net/ifaces/ens20/options' />
         <Item content='echo "172.16.4.1/28" >> /etc/net/ifaces/ens19/ipv4address' />
         <Item content='echo "172.16.5.1/28" >> /etc/net/ifaces/ens20/ipv4address' />
+        <Item content="vim /etc/net/sysctl.conf" />
+        <Item content="меняем в net.ipv4.ip_forward = 0 на 1 затем esc + shift z z" />
         <Item content="hostnamectl hostname ISP ; exec bash" />
         <Item content="systemctl restart network" />
-        <Item content="ip -br a">
-          <Image radius="md" w={"90%"} fit="contain" src={img1} />
-        </Item>
         <Item content="apt-get install -y iptables" />
         <Item content="iptables -t nat -A POSTROUTING -j MASQUERADE -o ens18" />
         <Item content="iptables-save >> /etc/sysconfig/iptables" />
-        <Item content="vim /etc/net/sysctl.conf" />
-        <Item content="меняем в net.ipv4.ip_forward = 0 на 1 затем esc + shift z z" />
+        <Item content="iptables-save" />
+        <Item content="ip -br a">
+          <Image radius="md" w={"90%"} fit="contain" src={img1} />
+        </Item>
+        <Item content="Скриншот в Рисунок 1, Рисунок 7 и Рисунок 23" />
         <Item content="systemctl restart network" />
       </SubTask>
 
@@ -58,7 +59,7 @@ export default function Task2() {
         <Item content="systemctl restart network" />
         <Item content="ping 172.16.4.1" />
         <Item content="ping 8.8.8.8" />
-        <Item content="сделать скрин с именем машины и пингами в задание 1" />
+        <Item content="Скриншот в Рисунок 2" />
         <Item content="apt-get update -y" />
         <Item content="apt-get install -y NetworkManager-tui" />
         <Item content="systemctl enable --now NetworkManager" />
@@ -75,7 +76,7 @@ export default function Task2() {
         <Item content="Remote IP: 172.16.5.2" />
         <Item content="IPv4 CONFIGURATION: Manual" />
         <Item content="Addresses: 10.5.5.1/30" />
-        <Item content="Проверяем и делаем скриншот настроек для Задания 6">
+        <Item content="Проверяем и делаем скриншот настроек в Рисунок 15">
           <Image radius="md" w={"60%"} fit="contain" src={img5} />
         </Item>
         <Item content="Спускаемся вниз и жмём OK" />
@@ -83,16 +84,19 @@ export default function Task2() {
         <Item content="ip -br a">
           <Image radius="md" w={"90%"} fit="contain" src={img6} />
         </Item>
+        <Item content="Скриншот в Рисунок 16" />
         <Item content="nmcli connection edit BR-RTR" />
         <Item content="set ip-tunnel.ttl 64" />
         <Item content="save" />
         <Item content="quit" />
         <Item content="reboot" />
         <Item content="iptables -t nat -A POSTROUTING -j MASQUERADE -o ens18" />
-        <Item content="iptables-save >> /etc/sysconfig/iptables">
+        <Item content="iptables-save >> /etc/sysconfig/iptables" />
+        <Item content="iptables-save">
           <Image radius="md" w={"90%"} fit="contain" src={img10} />
         </Item>
-        <Item content="Проверяем и делаем скриншот, что всё работает для Задания 8" />
+        <Item content="ping 8.8.8.8" />
+        <Item content="Скриншот в Рисунок 24" />
         <Item content="systemctl restart network" />
         <Item content="systemctl restart NetworkManager" />
         <Item content="Далее идет настройка openvswitch см Задание 4, иди туда, продолжишь BR-RTR, BR-SRV и HQ-SRV позже" />
@@ -110,6 +114,7 @@ export default function Task2() {
         <Item content="systemctl restart network" />
         <Item content="ping 172.16.5.1" />
         <Item content="ping 8.8.8.8" />
+        <Item content="Скриншот в Рисунок 5" />
         <Item content="apt-get update -y" />
         <Item content="apt-get install -y NetworkManager-tui" />
         <Item content="systemctl enable --now NetworkManager" />
@@ -126,7 +131,7 @@ export default function Task2() {
         <Item content="Remote IP: 172.16.4.2" />
         <Item content="IPv4 CONFIGURATION: Manual" />
         <Item content="Addresses: 10.5.5.2/30" />
-        <Item content="Проверяем и делаем скриншот настроек для Задания 6">
+        <Item content="Проверяем и делаем скриншот настроек в Рисунок 17">
           <Image radius="md" w={"60%"} fit="contain" src={img7} />
         </Item>
         <Item content="Спускаемся вниз и жмём OK" />
@@ -139,14 +144,14 @@ export default function Task2() {
         <Item content="save" />
         <Item content="quit" />
         <Item content="ping 10.5.5.1" />
-        <Item content="сделать скриншот в Задание 6, что пинг идет через GRE">
-          <Image radius="md" w={"90%"} fit="contain" src={img9} />
-        </Item>
+        <Item content="Скриншот в Рисунок 18" />
         <Item content="iptables -t nat -A POSTROUTING -j MASQUERADE -o ens18" />
-        <Item content="iptables-save >> /etc/sysconfig/iptables">
+        <Item content="iptables-save >> /etc/sysconfig/iptables" />
+        <Item content="iptables-save">
           <Image radius="md" w={"90%"} fit="contain" src={img10} />
         </Item>
-        <Item content="Проверяем и делаем скриншот, что все работает для Задания 8" />
+        <Item content="ping 8.8.8.8" />
+        <Item content="Скриншот в Рисунок 25" />
         <Item content="systemctl restart network" />
         <Item content="systemctl restart NetworkManager" />
         <Item content="Делаем паузу для настройки openvswitch в Задании 4" />
@@ -168,7 +173,8 @@ export default function Task2() {
         <Item content="systemctl restart network" />
         <Item content="ping 192.168.0.1" />
         <Item content="ping 8.8.8.8" />
-        <Item content="сделать скрин с именем машины и пингами в задание 1" />
+        <Item content="ip -br a" />
+        <Item content="Скриншот в Рисунок 6 и в Рисунок 27" />
       </SubTask>
 
       {/* HQ-SRV */}
@@ -181,10 +187,10 @@ export default function Task2() {
         <Item content="vim /etc/net/sysctl.conf" />
         <Item content="меняем в net.ipv4.ip_forward = 0 на 1 затем esc + shift z z" />
         <Item content="systemctl restart network" />
-        <Item content="ip -br a" />
         <Item content="ping 192.168.100.1" />
         <Item content="ping 8.8.8.8" />
-        <Item content="сделать скрин с именем машины и пингами в задание 1" />
+        <Item content="ip -br a" />
+        <Item content="Скриншот в Рисунок 3 и в Рисунок 26" />
       </SubTask>
 
       {/* HQ-CLI */}
@@ -196,9 +202,9 @@ export default function Task2() {
         <Item content="rm -f /etc/net/ifaces/ens18/ipv4address" />
         <Item content="systemctl restart network" />
         <Item content="systemctl restart NetworkManager" />
-        <Item content="ip -br a" />
         <Item content="ping 192.168.200.1" />
-        <Item content="сделать скрин с именем машины и пингами в задание 1" />
+        <Item content="ip -br a" />
+        <Item content="Скриншот в Рисунок 4, Рисунок 28 и в Рисунок 30" />
       </SubTask>
     </Task>
   );
