@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   Group,
   Text,
@@ -15,16 +15,16 @@ const Item = ({ content, children }) => {
   const theme = useMantineTheme();
   const [completed, setCompleted] = useState(false);
 
-  const textColor = completed ? theme.colors.gray[5] : theme.colors.dark[5];
+  const textColor = completed ? theme.colors.gray[6] : theme.colors.gray[4];
 
   return (
     <Paper
-      shadow={completed ? "xs" : "sm"}
       radius="lg"
-      withBorder
       p="xs"
       style={{
-        backgroundColor: completed ? theme.colors.gray[3] : "white",
+        backgroundColor: completed
+          ? theme.colors.gray[9]
+          : theme.colors.gray[8],
         transition: "all 300ms ease",
       }}
     >
@@ -43,7 +43,7 @@ const Item = ({ content, children }) => {
           {({ copied, copy }) => (
             <Tooltip label={copied ? "Скопировано" : "Скопировать"} withArrow>
               <ActionIcon
-                color={copied ? "teal" : "gray"}
+                color={copied ? theme.colors.gray[7] : theme.colors.gray[6]}
                 variant="subtle"
                 onClick={copy}
               >
@@ -57,7 +57,7 @@ const Item = ({ content, children }) => {
             size="md"
             checked={completed}
             onChange={(e) => setCompleted(e.currentTarget.checked)}
-            color="green"
+            color={theme.colors.gray[8]}
           />
         </Tooltip>
       </Group>

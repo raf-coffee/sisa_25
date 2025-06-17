@@ -2,10 +2,8 @@ import { Image } from "@mantine/core";
 import Task from "../Task/Task";
 import Item from "../Item/Item";
 import SubTask from "../SubTask/SubTask";
-import img1 from "../../assets/task2-01.webp";
 import img3 from "../../assets/task2-03.webp";
 import img4 from "../../assets/task2-04.webp";
-import img5 from "../../assets/task2-05.webp";
 import img6 from "../../assets/task2-06.webp";
 import img7 from "../../assets/task2-07.webp";
 import img8 from "../../assets/task2-08.webp";
@@ -28,9 +26,7 @@ export default function Task2() {
         <Item content="systemctl restart network" />
         <Item content="apt-get install -y iptables" />
         <Item content="iptables-save >> /etc/sysconfig/iptables && iptables-save" />
-        <Item content="ip -br a">
-          <Image radius="md" w={"90%"} fit="contain" src={img1} />
-        </Item>
+        <Item content="ip -br a" />
         <Item content="Скриншот в Рисунок 1, Рисунок 7 и Рисунок 23" />
         <Item content="systemctl restart network" />
       </SubTask>
@@ -53,9 +49,7 @@ export default function Task2() {
         <Item content="apt-get install -y NetworkManager-tui" />
         <Item content="systemctl enable --now NetworkManager" />
         <Item content="nmtui" />
-        <Item content="Заходим в Edit a connection">
-          <Image radius="md" w={"30%"} fit="contain" src={img4} />
-        </Item>
+        <Item content="Заходим в Edit a connection" />
         <Item content="Add > IP-Tunnel" />
         <Item content="Profile name: BR-RTR" />
         <Item content="Device: gre1" />
@@ -65,9 +59,7 @@ export default function Task2() {
         <Item content="Remote IP: 172.16.5.2" />
         <Item content="IPv4 CONFIGURATION: Manual" />
         <Item content="Addresses: 10.5.5.1/30" />
-        <Item content="Проверяем и делаем скриншот настроек в Рисунок 15">
-          <Image radius="md" w={"60%"} fit="contain" src={img5} />
-        </Item>
+        <Item content="Проверяем и делаем скриншот настроек в Рисунок 15" />
         <Item content="Спускаемся вниз и жмём OK" />
         <Item content="Esc > Activate a connection > наш GRE > нажать два раза на Enter > Esc > ctrl-z" />
         <Item content="ip -br a">
@@ -104,9 +96,7 @@ export default function Task2() {
         <Item content="apt-get install -y NetworkManager-tui" />
         <Item content="systemctl enable --now NetworkManager" />
         <Item content="nmtui" />
-        <Item content="Заходим в Edit a connection">
-          <Image radius="md" w={"30%"} fit="contain" src={img4} />
-        </Item>
+        <Item content="Заходим в Edit a connection" />
         <Item content="Add > IP-Tunnel" />
         <Item content="Profile name: HQ-RTR" />
         <Item content="Device: gre1" />
@@ -116,9 +106,7 @@ export default function Task2() {
         <Item content="Remote IP: 172.16.4.2" />
         <Item content="IPv4 CONFIGURATION: Manual" />
         <Item content="Addresses: 10.5.5.2/30" />
-        <Item content="Проверяем и делаем скриншот настроек в Рисунок 17">
-          <Image radius="md" w={"60%"} fit="contain" src={img7} />
-        </Item>
+        <Item content="Проверяем и делаем скриншот настроек в Рисунок 17" />
         <Item content="Спускаемся вниз и жмём OK" />
         <Item content="Esc > Activate a connection > наш GRE > нажать два раза на Enter > Esc > ctrl-z" />
         <Item content="ip -br a">
@@ -131,9 +119,7 @@ export default function Task2() {
         <Item content="ping 10.5.5.1" />
         <Item content="Скриншот в Рисунок 18" />
         <Item content="apt-get install iptables" />
-        <Item content="iptables -t nat -A POSTROUTING -j MASQUERADE -o ens18 && iptables-save >> /etc/sysconfig/iptables && iptables-save">
-          <Image radius="md" w={"90%"} fit="contain" src={img10} />
-        </Item>
+        <Item content="iptables -t nat -A POSTROUTING -j MASQUERADE -o ens18 && iptables-save >> /etc/sysconfig/iptables && iptables-save" />
         <Item content="ping 8.8.8.8" />
         <Item content="Скриншот в Рисунок 25" />
         <Item content="systemctl restart network" />
