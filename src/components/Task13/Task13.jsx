@@ -8,12 +8,7 @@ export default function Task13() {
       {/* HQ-RTR */}
       <SubTask machine={"HQ-RTR"}>
         <Item content="apt-get install -y chrony" />
-        <Item content='echo "server 192.168.100.1 iburst" >> /etc/chrony.conf' />
-        <Item content='echo "local stratum 5" >> /etc/chrony.conf' />
-        <Item content='echo "allow 192.168.100.0/28" >> /etc/chrony.conf' />
-        <Item content='echo "allow 192.168.200.0/28" >> /etc/chrony.conf' />
-        <Item content='echo "allow 192.168.0.0/28" >> /etc/chrony.conf' />
-        <Item content='echo "allow 10.5.5.0/30" >> /etc/chrony.conf' />
+        <Item content='echo "server 192.168.100.1 iburst" >> /etc/chrony.conf && echo "local stratum 5" >> /etc/chrony.conf && echo "allow 192.168.100.0/28" >> /etc/chrony.conf && echo "allow 192.168.200.0/28" >> /etc/chrony.conf && echo "allow 192.168.0.0/28" >> /etc/chrony.conf && echo "allow 10.5.5.0/30" >> /etc/chrony.conf' />
         <Item content="systemctl restart chronyd" />
         <Item content="chronyc tracking" />
         <Item content="Скриншот в Рисунок 48" />

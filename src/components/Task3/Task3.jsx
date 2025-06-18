@@ -8,8 +8,7 @@ export default function Task3() {
       {/* HQ-SRV */}
       <SubTask machine={"HQ-SRV"}>
         <Item content="adduser --uid 1010 sshuser && usermod -aG wheel sshuser" />
-        <Item content='echo "WHEEL_USERS ALL=(ALL:ALL) ALL" >> /etc/sudoers' />
-        <Item content='echo "WHEEL_USERS ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers' />
+        <Item content='echo "WHEEL_USERS ALL=(ALL:ALL) ALL" >> /etc/sudoers && echo "WHEEL_USERS ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers' />
         <Item content="visudo -c" />
         <Item content="passwd sshuser" />
         <Item content="P@$$word" />
@@ -23,8 +22,7 @@ export default function Task3() {
       {/* BR-SRV */}
       <SubTask machine={"BR-SRV"}>
         <Item content="adduser --uid 1010 sshuser && usermod -aG wheel sshuser" />
-        <Item content='echo "WHEEL_USERS ALL=(ALL:ALL) ALL" >> /etc/sudoers' />
-        <Item content='echo "WHEEL_USERS ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers' />
+        <Item content='echo "WHEEL_USERS ALL=(ALL:ALL) ALL" >> /etc/sudoers && echo "WHEEL_USERS ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers' />
         <Item content="visudo -c" />
         <Item content="passwd sshuser" />
         <Item content="P@$$word" />
@@ -38,8 +36,7 @@ export default function Task3() {
       {/* HQ-RTR */}
       <SubTask machine={"HQ-RTR"}>
         <Item content="adduser net_admin && usermod -aG wheel net_admin" />
-        <Item content='echo "WHEEL_USERS ALL = (ALL:ALL) ALL" >> /etc/sudoers' />
-        <Item content='echo "WHEEL_USERS ALL = (ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers' />
+        <Item content='echo "WHEEL_USERS ALL = (ALL:ALL) ALL" >> /etc/sudoers && echo "WHEEL_USERS ALL = (ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers' />
         <Item content="visudo -c" />
         <Item content="passwd net_admin" />
         <Item content="P@ssw0rd" />
@@ -53,8 +50,7 @@ export default function Task3() {
       {/* BR-RTR */}
       <SubTask machine={"BR-RTR"}>
         <Item content="adduser net_admin && usermod -aG wheel net_admin" />
-        <Item content='echo "WHEEL_USERS ALL=(ALL:ALL) ALL" >> /etc/sudoers' />
-        <Item content='echo "WHEEL_USERS ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers' />
+        <Item content='echo "WHEEL_USERS ALL = (ALL:ALL) ALL" >> /etc/sudoers && echo "WHEEL_USERS ALL = (ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers' />
         <Item content="visudo -c" />
         <Item content="passwd net_admin" />
         <Item content="P@ssw0rd" />

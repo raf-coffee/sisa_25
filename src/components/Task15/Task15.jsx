@@ -7,7 +7,7 @@ export default function Task16() {
     <Task title={"Задание 6. Настройка статической трансляции портов"}>
       {/* HQ-RTR */}
       <SubTask machine={"HQ-RTR"}>
-        <Item content="iptables -t nat -A PREROUTING -p tcp --dport 22 -j DNAT --to-destination 192.168.100.2:2024" />
+        <Item content="iptables -t nat -A PREROUTING -p tcp --dport 22 -j DNAT --to-destination 192.168.100.2:2024 && " />
         <Item content="iptables-save >> /etc/sysconfig/iptables" />
         <Item content="systemctl enable --now iptables" />
         <Item content="Скриншот в Рисунок 55" />

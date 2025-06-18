@@ -19,7 +19,7 @@ function App() {
   const theme = useMantineTheme();
 
   return (
-    <Box bg={theme.colors.indigo[0]}>
+    <Box bg={theme.colors.gray[8]} c={theme.colors.gray[4]}>
       <title>Демо экзамен 2025</title>
       <Container size={"sm"} pb={"lg"}>
         {/* Модуль 1 */}

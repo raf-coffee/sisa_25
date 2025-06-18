@@ -58,8 +58,7 @@ export default function Task10() {
         <Item content="Если ошибка File not found, то ls zone и удалить rm -f названия с ~" />
         <Item content="systemctl enable --now bind" />
         <Item content="cd" />
-        <Item content='echo "nameserver 192.168.100.2" > /etc/net/ifaces/ens18/resolv.conf' />
-        <Item content='echo "domain au-team.irpo" >> /etc/net/ifaces/ens18/resolv.conf' />
+        <Item content='echo "nameserver 192.168.100.2" > /etc/net/ifaces/ens18/resolv.conf && echo "domain au-team.irpo" >> /etc/net/ifaces/ens18/resolv.conf' />
         <Item content="systemctl restart network" />
         <Item content="reboot" />
         <Item content="ping ya.ru" />
@@ -70,8 +69,7 @@ export default function Task10() {
 
       {/* HQ-RTR */}
       <SubTask machine={"HQ-RTR"}>
-        <Item content='echo "nameserver 192.168.100.2" > /etc/net/ifaces/ens18/resolv.conf' />
-        <Item content='echo "domain au-team.irpo" >> /etc/net/ifaces/ens18/resolv.conf' />
+        <Item content='echo "nameserver 192.168.100.2" > /etc/net/ifaces/ens18/resolv.conf && echo "domain au-team.irpo" >> /etc/net/ifaces/ens18/resolv.conf' />
         <Item content="systemctl restart network" />
         <Item content="ping ya.ru" />
         <Item content="ping br-srv" />
@@ -80,8 +78,7 @@ export default function Task10() {
 
       {/* BR-RTR */}
       <SubTask machine={"BR-RTR"}>
-        <Item content='echo "nameserver 192.168.100.2" > /etc/net/ifaces/ens18/resolv.conf' />
-        <Item content='echo "domain au-team.irpo" >> /etc/net/ifaces/ens18/resolv.conf' />
+        <Item content='echo "nameserver 192.168.100.2" > /etc/net/ifaces/ens18/resolv.conf && echo "domain au-team.irpo" >> /etc/net/ifaces/ens18/resolv.conf' />
         <Item content="systemctl restart network" />
         <Item content="ping ya.ru" />
         <Item content="ping hq-srv" />
@@ -90,8 +87,7 @@ export default function Task10() {
 
       {/* BR-SRV */}
       <SubTask machine={"BR-SRV"}>
-        <Item content='echo "nameserver 192.168.100.2" > /etc/net/ifaces/ens18/resolv.conf' />
-        <Item content='echo "domain au-team.irpo" >> /etc/net/ifaces/ens18/resolv.conf' />
+        <Item content='echo "nameserver 192.168.100.2" > /etc/net/ifaces/ens18/resolv.conf && echo "domain au-team.irpo" >> /etc/net/ifaces/ens18/resolv.conf' />
         <Item content="systemctl restart network" />
         <Item content="ping ya.ru" />
         <Item content="ping hq-srv" />
