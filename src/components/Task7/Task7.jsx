@@ -37,9 +37,9 @@ export default function Task7() {
           <Image radius="md" w={"90%"} fit="contain" src={img1} />
         </Item>
         <Item content='vtysh -c "show running-config"' />
-        <Item content="Скриншот в Рисунок 19" />
+        <Item content="Скриншот в Задание 7" />
         <Item content="ip route" />
-        <Item content="Скриншот в Рисунок 20" />
+        <Item content="Скриншот в Задание 7" />
       </SubTask>
 
       {/* BR-RTR */}
@@ -69,9 +69,9 @@ export default function Task7() {
         </Item>
         <Item content="ping 192.168.100.2" />
         <Item content='vtysh -c "show running-config"' />
-        <Item content="Скриншот в Рисунок 21" />
+        <Item content="Скриншот в Задание 7" />
         <Item content="ip route" />
-        <Item content="Скриншот в Рисунок 22" />
+        <Item content="Скриншот в Задание 7" />
       </SubTask>
 
       {/* HQ-SRV */}

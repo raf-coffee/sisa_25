@@ -34,7 +34,7 @@ export default function Task9() {
         <Item content="далее в host fantasia, смотрим какой MAC-адрес у HQ-CLI, и вместо 10 в конце ставим 2:">
           <Image radius="md" w={"50%"} fit="contain" src={img4} />
         </Item>
-        <Item content="Скриншот в Рисунок 29" />
+        <Item content="Скриншот в Задание 9" />
         <Item content="esc + shift z z" />
         <Item content="systemctl restart dhcpd" />
         <Item content="systemctl enable --now dhcpd" />
