@@ -21,7 +21,7 @@ export default function Task10() {
         <Item content="Приводим к виду:">
           <Image radius="md" w={"90%"} fit="contain" src={img1} />
         </Item>
-        <Item content="Скриншот в Рисунок 31" />
+        <Item content="Скриншот в Задание 10" />
         <Item content="Затем там же и после правки esc + shit z z:">
           <Image radius="md" w={"90%"} fit="contain" src={img2} />
         </Item>
@@ -35,14 +35,14 @@ export default function Task10() {
         <Item content="Приводим к виду:">
           <Image radius="md" w={"90%"} fit="contain" src={img4} />
         </Item>
-        <Item content="Скриншот в Рисунок 32" />
+        <Item content="Скриншот в Задание 10" />
         <Item content="cp au-team.db 100.168.192.in-addr.arpa" />
         <Item content="cp au-team.db 200.168.192.in-addr.arpa" />
         <Item content="vim 100.168.192.in-addr.arpa" />
         <Item content="Приводим к виду:">
           <Image radius="md" w={"90%"} fit="contain" src={img5} />
         </Item>
-        <Item content="Скриншот в Рисунок 33" />
+        <Item content="Скриншот в Задание 10" />
         <Item content="vim 200.168.192.in-addr.arpa" />
         <Item content="Приводим к виду:">
           <Image radius="md" w={"90%"} fit="contain" src={img6} />
@@ -63,7 +63,7 @@ export default function Task10() {
         <Item content="reboot" />
         <Item content="ping ya.ru" />
         <Item content="ping br-srv" />
-        <Item content="Скриншот в Рисунок 34" />
+        <Item content="Скриншот в Задание 10" />
         <Item content="Если где-то что-то далее будет на работать, то смотреть iptables" />
       </SubTask>
 
@@ -73,7 +73,7 @@ export default function Task10() {
         <Item content="systemctl restart network" />
         <Item content="ping ya.ru" />
         <Item content="ping br-srv" />
-        <Item content="Скриншот в Рисунок 35" />
+        <Item content="Скриншот в Задание 10" />
       </SubTask>
 
       {/* BR-RTR */}
@@ -82,7 +82,7 @@ export default function Task10() {
         <Item content="systemctl restart network" />
         <Item content="ping ya.ru" />
         <Item content="ping hq-srv" />
-        <Item content="Скриншот в Рисунок 36" />
+        <Item content="Скриншот в Задание 10" />
       </SubTask>
 
       {/* BR-SRV */}
@@ -91,14 +91,14 @@ export default function Task10() {
         <Item content="systemctl restart network" />
         <Item content="ping ya.ru" />
         <Item content="ping hq-srv" />
-        <Item content="Скриншот в Рисунок 37" />
+        <Item content="Скриншот в Задание 10" />
       </SubTask>
 
       {/* HQ-CLI */}
       <SubTask machine={"HQ-CLI"}>
         <Item content="ping ya.ru" />
         <Item content="ping br-srv" />
-        <Item content="Скриншот в Рисунок 38" />
+        <Item content="Скриншот в Задание 10" />
       </SubTask>
     </Task>
   );

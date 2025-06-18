@@ -24,13 +24,13 @@ export default function Task12() {
           <Image radius="md" w={"90%"} fit="contain" src={img4} />
         </Item>
         <Item content="mount -a" />
-        <Item content="Скриншот в Рисунок 45" />
+        <Item content="Скриншот в Задание 2-2" />
         <Item content="apt-get install -y nfs-server" />
         <Item content="mkdir /raid5/nfs" />
         <Item content='echo "/raid5/nfs 192.168.200.2(rw,sync,no_subtree_check)" >> /etc/exports' />
         <Item content="exportfs -a" />
         <Item content="systemctl restart nfs-server" />
-        <Item content="Скриншот в Рисунок 46" />
+        <Item content="Скриншот в Задание 2-2" />
       </SubTask>
 
       {/* HQ-CLI */}
@@ -42,7 +42,7 @@ export default function Task12() {
           <Image radius="md" w={"90%"} fit="contain" src={img4} />
         </Item>
         <Item content="mount -a" />
-        <Item content="Скриншот в Рисунок 47" />
+        <Item content="Скриншот в Задание 2-2" />
       </SubTask>
     </Task>
   );

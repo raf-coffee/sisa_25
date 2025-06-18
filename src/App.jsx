@@ -14,14 +14,18 @@ import Task13 from "./components/Task13/Task13";
 import Task14 from "./components/Task14/Task14";
 import Task15 from "./components/Task15/Task15";
 import Task16 from "./components/Task16/Task16";
+import Config from "./components/Config/Config";
 
 function App() {
   const theme = useMantineTheme();
 
   return (
     <Box bg={theme.colors.gray[8]} c={theme.colors.gray[4]}>
-      <title>Демо экзамен 2025</title>
-      <Container size={"sm"} pb={"lg"}>
+      <title>Мануал 2025</title>
+      <Container size={"sm"} pt={"lg"} pb={"lg"}>
+        {/* Настройки */}
+        <Config />
+
         {/* Модуль 1 */}
         <Title order={1} style={{ textAlign: "center" }}>
           Модуль 1

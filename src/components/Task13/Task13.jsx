@@ -11,7 +11,7 @@ export default function Task13() {
         <Item content='echo "server 192.168.100.1 iburst" >> /etc/chrony.conf && echo "local stratum 5" >> /etc/chrony.conf && echo "allow 192.168.100.0/28" >> /etc/chrony.conf && echo "allow 192.168.200.0/28" >> /etc/chrony.conf && echo "allow 192.168.0.0/28" >> /etc/chrony.conf && echo "allow 10.5.5.0/30" >> /etc/chrony.conf' />
         <Item content="systemctl restart chronyd" />
         <Item content="chronyc tracking" />
-        <Item content="Скриншот в Рисунок 48" />
+        <Item content="Скриншот в Задание 2-3" />
       </SubTask>
 
       {/* HQ-SRV */}
@@ -21,7 +21,7 @@ export default function Task13() {
         <Item content='echo "server 192.168.100.1 iburst" >> /etc/chrony.conf' />
         <Item content="systemctl restart chronyd" />
         <Item content="chronyc tracking" />
-        <Item content="Скриншот в Рисунок 49" />
+        <Item content="Скриншот в Задание 2-3" />
       </SubTask>
 
       {/* HQ-CLI */}
@@ -33,7 +33,7 @@ export default function Task13() {
         <Item content='echo "server 192.168.100.1 iburst" >> /etc/chrony.conf' />
         <Item content="systemctl restart chronyd" />
         <Item content="chronyc tracking" />
-        <Item content="Скриншот в Рисунок 50" />
+        <Item content="Скриншот в Задание 2-3" />
       </SubTask>
 
       {/* BR-RTR */}
@@ -43,7 +43,7 @@ export default function Task13() {
         <Item content='echo "server 192.168.100.1 iburst" >> /etc/chrony.conf' />
         <Item content="systemctl restart chronyd" />
         <Item content="chronyc tracking" />
-        <Item content="Скриншот в Рисунок 51" />
+        <Item content="Скриншот в Задание 2-3" />
       </SubTask>
 
       {/* BR-SRV */}
@@ -54,7 +54,7 @@ export default function Task13() {
         <Item content='echo "server 192.168.100.1 iburst" >> /etc/chrony.conf' />
         <Item content="systemctl restart chronyd" />
         <Item content="chronyc tracking" />
-        <Item content="Скриншот в Рисунок 52" />
+        <Item content="Скриншот в Задание 2-3" />
       </SubTask>
     </Task>
   );

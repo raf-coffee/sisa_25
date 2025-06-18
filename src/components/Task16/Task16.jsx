@@ -11,7 +11,7 @@ export default function Task16() {
         <Item content="apt-get update" />
         <Item content="apt-get install -y yandex-browser-stable" />
         <Item content="yandex-browser-stable" />
-        <Item content="Скриншот в Рисунок 56" />
+        <Item content="Скриншот в Задание 2-9" />
       </SubTask>
     </Task>
   );
