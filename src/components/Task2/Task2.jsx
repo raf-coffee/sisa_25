@@ -36,7 +36,7 @@ export default function Task2() {
         <Item content="hostnamectl hostname ISP ; exec bash" />
         <Item content="systemctl restart network" />
         <Item content="apt-get install -y iptables" />
-        <Item content="iptables-save >> /etc/sysconfig/iptables && iptables-save" />
+        <Item content="iptables -t nat -A POSTROUTING -j MASQUERADE -o ens18 && iptables-save >> /etc/sysconfig/iptables && iptables-save" />
         <Item content="ip -br a" />
         <Item content="Скриншот в Задание 1, Задание 2 и Задание 8" />
         <Item content="systemctl restart network" />
